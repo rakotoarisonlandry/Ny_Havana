@@ -18,7 +18,7 @@ function Home() {
   return (
     <>
       <div>
-        <ul className=" flex items-center text-center space-x-4 pr-30">
+        <ul className=" flex items-center text-center space-x-11 pt-3 pl-[900px]">
           <li>Accueil</li>
           <li>Blog</li>
           <li>Contact</li>
