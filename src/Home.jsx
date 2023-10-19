@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <>
-      <div className="Defilement">
+      <div>
         <ul className=" flex items-center text-center space-x-4 pr-30">
           <li>Accueil</li>
           <li>Blog</li>
