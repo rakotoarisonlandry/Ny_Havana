@@ -3,14 +3,14 @@ import axios from "axios";
 import "./index.css"
 
 function Home() {
-  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     axios
       .get("http://localhost:8081/")
       .then((res) => console.log(res))
       .catch((err) => {
-        setError(err);
+        // setError(err);
         console.log(err);
       });
   }, []);
