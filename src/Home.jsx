@@ -3,8 +3,6 @@ import axios from "axios";
 import "./index.css"
 
 function Home() {
-
-
   useEffect(() => {
     axios
       .get("http://localhost:8081/")
