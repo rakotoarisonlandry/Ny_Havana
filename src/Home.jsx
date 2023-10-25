@@ -8,7 +8,6 @@ function Home() {
       .get("http://localhost:8081/")
       .then((res) => console.log(res))
       .catch((err) => {
-        // setError(err);
         console.log(err);
       });
   }, []);
@@ -25,4 +24,5 @@ function Home() {
     </>
   );
 }
+
 export default Home;
