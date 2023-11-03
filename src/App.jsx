@@ -6,12 +6,14 @@ import Form from "./Form";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/formulaire" element={<Form/>} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/formulaire" element={<Form />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

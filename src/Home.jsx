@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./index.css"
-
+import Header from "./Header";
 function Home() {
   useEffect(() => {
     axios
@@ -15,11 +15,7 @@ function Home() {
   return (
     <>
       <div>
-        <ul className=" flex items-center text-center space-x-11 pt-3 pl-[900px]">
-          <li>Accueil</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
+        <Header/>
       </div>
     </>
   );
