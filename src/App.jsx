@@ -5,7 +5,7 @@ import React from "react";
 import Form from "./pages/Form";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
+import "./Style.scss"
 const Layout = () => {
   return (
     <>
