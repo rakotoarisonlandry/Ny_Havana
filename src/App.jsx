@@ -1,20 +1,34 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
-import Form from "./Form";
+import Form from "./pages/Form";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <Header />
-        <Home />
-        <Footer />
-      </div>
-    ),
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/form",
+        element: <Form />,
+      },
+    ],
   },
 ]);
 
