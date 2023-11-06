@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./img/logo.png";
-import LogoHome from "./img/carbon_home.svg";
+import logo from "../img/logo.png";
+import LogoHome from "../img/carbon_home.svg";
 function Header() {
   return (
     <div className="flex  text-[#fff] pl-9 space-x-[18px]">
