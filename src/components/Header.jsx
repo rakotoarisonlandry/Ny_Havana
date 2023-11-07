@@ -6,8 +6,8 @@ function Header() {
   return (
     <div className="flex  text-[#fff] pl-7 space-x-2">
       <div className="flex space-x-3 pt-3  items-center">
-        <img src={logo} alt="NyHavana" className="w-11" />
-        <h2 className="text-2xl">Ny Havana</h2>
+        <img src={logo} alt="NyHavana" className="w-8" />
+        <h2 className="text-2xl font-bold">Ny Havana</h2>
       </div>
       <ul className=" flex items-center text-center text-[17px] space-x-16 pt-2 pl-[780px]">
         <Link to="/" className="pt-6">
