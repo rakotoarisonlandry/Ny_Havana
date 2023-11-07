@@ -31,3 +31,10 @@ code {
   animation: slide 6s infinite linear alternate;
 }
 
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #E9A748, #72B89E);
+}
