@@ -10,11 +10,11 @@ function Header() {
       </Link>
       <ul className=" flex items-center text-center text-[17px] space-x-16 pt-2 pl-[780px]">
         <Link to="/" className="pt-6">
-          <li className="font-bold text-[#80a072] pb-3">Home</li>
+          <li className="font-bold text-[#80a072] pb-3">Accueil</li>
           <div className="w-2 h-2 bg-[#80a072] ml-5  rounded-full relative"></div>
         </Link>
         <Link>Blog</Link>
-        <Link>Contact Us</Link>
+        <Link>Contact</Link>
       </ul>
     </div>
   );

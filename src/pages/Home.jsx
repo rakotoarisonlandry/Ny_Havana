@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../index.css";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import little from "../img/Group 6.svg"
+import little from "../img/Group 6.svg";
 import HomeComponent from "../components/HomeComponent";
+import { Link } from "react-router-dom";
+import iconify from "../img/Inconify.svg"
 function Home() {
   useEffect(() => {
     axios
@@ -22,7 +22,7 @@ function Home() {
   };
   return (
     <>
-    <img src={little} alt="little avatar" className="absolute"/>
+      <img src={little} alt="little avatar" className="absolute" />
       <div className="w-full mt-28 ml-10 flex ">
         <div className="w-[50%] space-y-7 ">
           <Typography
@@ -36,15 +36,24 @@ function Home() {
             “...Bien assuré,lendemain sécurisé.“
           </Typography>
           <div className="flex space-x-4 pt-10">
-            <button className="pt-3 pb-4 pl-8 pr-8 rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]">
-              Votre economie ici
-            </button>
-            <button className="text-[#FBB03B] rounded-xl border-[1px] border-[#FBB03B] pt-3 pb-4 pl-8 pr-8">
-              Contact Us
-            </button>
+            <Link
+              to=""
+              className="pt-3 flex pb-4 space-x-3 pl-8 pr-8 rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
+            >
+              <p>Lire la suite</p>
+              <img src={iconify} alt="inconify" className="w-5 pt-1"/>
+            </Link>
+            <Link
+              to=""
+              className="text-[#FBB03B] rounded-xl border-[1px] border-[#FBB03B] pt-3 pb-4 pl-8 pr-8"
+            >
+              Contactez-nous
+            </Link>
           </div>
         </div>
-        <div><HomeComponent/></div>
+        <div>
+          <HomeComponent />
+        </div>
       </div>
     </>
   );
