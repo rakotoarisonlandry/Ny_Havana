@@ -3,7 +3,7 @@ import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
 function Header() {
   return (
-    <div className="flex  text-[#fff] pl-7 space-x-2">
+    <div className="flex  select-none text-[#fff] pl-7 space-x-2">
       <Link to="/" className="flex space-x-3 pt-3  items-center">
         <img src={logo} alt="NyHavana" className="w-8" />
         <h2 className="text-2xl font-bold">Ny Havana</h2>
