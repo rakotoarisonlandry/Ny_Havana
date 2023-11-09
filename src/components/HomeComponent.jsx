@@ -29,7 +29,7 @@ function HomeComponent() {
     },
   ];
   return (
-    <div className="home p-20 w-[100%]">
+    <div className="home p-20 w-full flex items-center justify-center">
       <div className="posts mt-[20%]  flex-col w-[100%] ">
         {posts.map((post) => (
           <div key={post.id} className="flex mb-[20%] post flex  ">
