@@ -55,7 +55,7 @@ function HomeComponent() {
                   to=""
                   className="text-[#FBB03B] mt-16 font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"
                 >
-                  Visiter
+                  Voir plus
                 </Link>
               </div>
             </div>
