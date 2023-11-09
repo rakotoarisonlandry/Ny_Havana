@@ -1,19 +1,9 @@
-.home{
-    .posts{
-        .post{
-            &:nth-child(2n){
-                flex-direction: row-reverse;
-            }
-        }
-        .desc{
-            &:nth-child(0){
-                flex-direction: row-reverse;
-                margin-left: 45px;
-            }
-            &:nth-child(1){
-                flex-direction: row-reverse;
-                margin-left: 0;
-            }
-        }
+.home {
+  .posts {
+    .post {
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
     }
+  }
 }
