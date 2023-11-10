@@ -40,13 +40,22 @@
       }
       .edit {
       display: flex;
-      gap: 5px;
+      gap: 8px;
       img{
         width: 20px;
         height: 20px;
         cursor: pointer;
       }
       }
+      
+    }
+    h1{
+      font-size: 42px;
+      color: #F9A83C;
+      // font-weight: bold;
+    }
+    p {
+      color: #807182;
     }
   }
   .menu {
