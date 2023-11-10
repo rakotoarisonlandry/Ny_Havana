@@ -1,6 +1,8 @@
 import React from "react";
 import ImageSigle from "../img/Rectangle 2.svg";
 import ellipse from "../img/Ellipse 2.svg";
+import Iconedit from "../img/editIcon.svg";
+import Icondelete from "../img/DeleteIcon.svg";
 function SinglePage() {
   return (
     <div className="single">
@@ -11,6 +13,10 @@ function SinglePage() {
           <div className="info">
             <span>John</span>
             <p>Posted to days ago</p>
+          </div>
+          <div className="edit">
+            <img src={Iconedit} alt="" />
+            <img src={Icondelete} alt="" />
           </div>
         </div>
       </div>
