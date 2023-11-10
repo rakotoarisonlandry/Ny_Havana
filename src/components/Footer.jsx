@@ -14,7 +14,7 @@ function Footer() {
             className="text-white flex space-x-3 pb-2 ml-8 pt-2  items-center"
           >
             <img src={logo} alt="NyHavana" className="w-8" />
-            <h2 className="text-2xl font-bold">Ny Havana</h2>
+            <h2 className="text-2xl font-bold">©Ny Havana</h2>
           </Link>
           <div className="flex space-x-3">
             <img src={LogoLinkedin} alt="linkedin" />
