@@ -34,10 +34,16 @@ function HomeComponent() {
         {posts.map((post) => (
           <div key={post.id} className="flex mb-[20%] post flex  ">
             <div>
-              <img src={post.img} className="w-[1800px] object-cover" alt="" />
+              <Link to={`/post/${post.id}`}>
+                <img
+                  src={post.img}
+                  className="w-[1800px] object-cover"
+                  alt=""
+                />
+              </Link>
             </div>
             <div className="desc ml-24 mr-16">
-              <Link to={`/post/${post.id}`}>
+              <Link to="/">
                 <div className="flex gap-1 items-center ">
                   <div className="w-2 h-2 rounded-full bg-[#DF4051]"></div>
                   <div className="w-3 h-3 rounded-full bg-[#F9A83C]"></div>
@@ -52,7 +58,7 @@ function HomeComponent() {
               <p className="text-white ">{post.desc}</p>
               <div className="mt-16">
                 <Link
-                  to=""
+                  to={`/post/${post.id}`}
                   className="text-[#FBB03B] mt-16 font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"
                 >
                   Voir plus
