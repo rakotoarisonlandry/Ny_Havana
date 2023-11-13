@@ -9,9 +9,9 @@
 }
 
 //SinglePage
+
 .single {
   display: flex;
-  gap: 40px;
   padding-left: 40px;
   margin-top: 40px;
   .content {
@@ -39,19 +39,18 @@
         color: #807182;
       }
       .edit {
-      display: flex;
-      gap: 8px;
-      img{
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        img {
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
       }
-      }
-      
     }
-    h1{
+    h1 {
       font-size: 42px;
-      color: #F9A83C;
+      color: #f9a83c;
       // font-weight: bold;
     }
     p {
@@ -60,5 +59,59 @@
   }
   .menu {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-right: 50px;
+    h1 {
+      font-size: 20px;
+    }
+
+    .post {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+//write 
+
+.add {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  .content{
+    flex: 5;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input{
+      padding: 10px;
+      border: 1px solid #807182;
+      background-color: #1C0A43;
+      color:#807182 ;
+    }
+    .editorContainer{
+      color:#807182 ;
+      height: 300px;
+      overflow: scroll;
+      .editor{
+        color: #807182;
+        height:200px;
+        border: none;
+      }
+    }
+  }
+  .menu{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }

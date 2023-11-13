@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="w-full">
       <footer>
-        <div className="mt-96 ml-8 mr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
+        <div className="mt-52 ml-8 mr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
         <div className="flex space-x-[75%]">
           <Link
             to="/"

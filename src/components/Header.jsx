@@ -14,7 +14,7 @@ function Header() {
           <div className="w-2 h-2 bg-[#80a072] ml-5  rounded-full relative"></div>
         </Link>
         <Link>Blog</Link>
-        <Link>Contact</Link>
+        <Link to="/write">Write</Link>
       </ul>
     </div>
   );

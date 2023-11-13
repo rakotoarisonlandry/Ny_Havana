@@ -4,11 +4,12 @@ import ellipse from "../img/Ellipse 2.svg";
 import Iconedit from "../img/editIcon.svg";
 import Icondelete from "../img/DeleteIcon.svg";
 import { Link } from "react-router-dom";
+import Menu from "./Menu";
 function SinglePage() {
   return (
     <div className="single">
       <div className="content">
-        <img src={ImageSigle} className="w-[80%] h-[40%]" alt="" />
+        <img src={ImageSigle} className="w-[80%] h-[26%]" alt="" />
         <div className="user">
           <img src={ellipse} alt="" />
           <div className="info">
@@ -35,7 +36,7 @@ function SinglePage() {
           Voluptatibus quas ex distinctio eligendi animi ab numquam iusto eaque! Quia, laborum deserunt? Voluptatibus, dignissimos expedita molestiae incidunt et hic omnis optio aspernatur, porro eligendi enim, aperiam voluptas consequatur eum!
         </p>
       </div>
-      <div className="menu">m</div>
+      <Menu/>
     </div>
   );
 }
