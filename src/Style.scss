@@ -79,39 +79,45 @@
     }
   }
 }
-//write 
+//write
 
 .add {
   margin-top: 20px;
   display: flex;
   gap: 20px;
-  .content{
+  .content {
     flex: 5;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    input{
+    input {
       padding: 10px;
       border: 1px solid #807182;
-      background-color: #1C0A43;
-      color:#807182 ;
+      background-color: #1c0a43;
+      color: #807182;
     }
-    .editorContainer{
-      color:#807182 ;
+    .editorContainer {
+      color: #807182;
       height: 300px;
       overflow: scroll;
-      .editor{
+      border: 1px solid lightgray;
+      .editor {
         color: #807182;
-        height:200px;
+        height: 200px;
         border: none;
       }
     }
   }
-  .menu{
+  .menu {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #807182;
+    .items {
+      padding: 3px;
+      margin: 20px;
+    }
   }
 }
