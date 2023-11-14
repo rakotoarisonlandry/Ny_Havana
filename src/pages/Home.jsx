@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import iconify from "../img/Inconify.svg";
 import HomeComponent from "./Blog";
 
-
 function Home() {
   useEffect(() => {
     axios

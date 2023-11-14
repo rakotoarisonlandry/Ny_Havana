@@ -10,6 +10,7 @@ import SinglePage from "./components/SinglePage";
 import Write from "./components/Write";
 import HomeComponent from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 
 const Layout = () => {
   return (
@@ -30,17 +31,13 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/form",
-        element: <Form />,
-      },
-      {
         path: "/contact",
-        element:  <Contact/>
+        element: <Contact />,
       },
-      
+
       {
         path: "/blog",
-        element: <HomeComponent/>
+        element: <HomeComponent />,
       },
       {
         path: "/post/:id",
@@ -51,6 +48,10 @@ const router = createBrowserRouter([
         element: <Write />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 

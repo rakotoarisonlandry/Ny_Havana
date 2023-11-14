@@ -6,9 +6,9 @@ import LogoLinkedin from "../img/Linkenin.svg";
 
 function Footer() {
   return (
-    <div className="w-full">
+    <div className="items-center w-full">
       <footer>
-        <div className=" mt-52 pl-8 pr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
+        <div className=" mt-52 ml-8  pr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
         <div className="flex space-x-[75%]">
           <Link
             to="/"
