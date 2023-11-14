@@ -2,8 +2,8 @@ import React from "react";
 
 function Form() {
   return (
-    <div className="Registe">
-      <h1>Register</h1>
+    <div className="Login">
+      <h1>Login</h1>
       <form>
         <input type="text" /> 
       </form>

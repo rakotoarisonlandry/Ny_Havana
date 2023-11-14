@@ -1,11 +1,10 @@
 .home {
   .posts {
     .post {
-      &:nth-child(2n+1) {
+      &:nth-child(2n + 1) {
         flex-direction: row-reverse;
         margin-bottom: 20%;
       }
-
     }
   }
 }

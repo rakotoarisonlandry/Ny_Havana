@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.png";
-import LogoFacebook from "../img/ic_baseline-facebook.svg"
-import LogoLinkedin from "../img/Linkenin.svg"
+import LogoFacebook from "../img/ic_baseline-facebook.svg";
+import LogoLinkedin from "../img/Linkenin.svg";
+
 function Footer() {
   return (
     <div className="w-full">
       <footer>
-        <div className="mt-52 ml-8 mr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
+        <div className=" mt-52 pl-8 pr-8 w-[95%] h-[1px] bg-[#AE9F9F] "></div>
         <div className="flex space-x-[75%]">
           <Link
             to="/"
