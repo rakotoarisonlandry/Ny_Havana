@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import "./Style.scss";
 import SinglePage from "./components/SinglePage";
 import Write from "./components/Write";
+import HomeComponent from "./components/HomeComponent";
 const Layout = () => {
   return (
     <>
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/form",
         element: <Form />,
+      },
+      {
+        path: "/blog",
+        element: <HomeComponent/>
       },
       {
         path: "/post/:id",

@@ -58,7 +58,7 @@ function Home() {
           <ImageComponent />
         </div>
       </div>
-      <div><HomeComponent/></div>
+      {/* <div><HomeComponent/></div> */}
     </>
   );
 }

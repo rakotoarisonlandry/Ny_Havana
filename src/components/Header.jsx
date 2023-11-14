@@ -13,7 +13,7 @@ function Header() {
           <li className="font-bold text-[#80a072] pb-3">Accueil</li>
           <div className="w-2 h-2 bg-[#80a072] ml-5  rounded-full relative"></div>
         </Link>
-        <Link>Blog</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/write">Write</Link>
       </ul>
     </div>

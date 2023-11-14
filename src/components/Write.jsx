@@ -18,7 +18,7 @@ function Write() {
           />
         </div>
       </div>
-      <div className="menu">
+      <div className="Menu">
         <div className="items">
           <h1>Publish</h1>
           <span>

@@ -29,10 +29,10 @@ function HomeComponent() {
     },
   ];
   return (
-    <div className="home p-20 w-full flex items-center justify-center">
-      <div className="posts mt-[20%]  flex-col w-[100%] ">
+    <div className="home  p-20 w-full flex items-center justify-center">
+      <div className="posts mt-[1%]  flex-col w-[100%] ">
         {posts.map((post) => (
-          <div key={post.id} className="flex mb-[20%] post flex  ">
+          <div key={post.id} className="flex mb-[20%]  post flex  ">
             <div>
               <Link to={`/post/${post.id}`}>
                 <img
@@ -42,7 +42,7 @@ function HomeComponent() {
                 />
               </Link>
             </div>
-            <div className="desc ml-24 mr-16">
+            <div className="desc ml-24 mr-16 w-full">
               <Link to="/">
                 <div className="flex gap-1 items-center ">
                   <div className="w-2 h-2 rounded-full bg-[#DF4051]"></div>
