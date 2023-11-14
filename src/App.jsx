@@ -2,13 +2,15 @@ import "./App.css";
 import Home from "./pages/Home";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
-import Form from "./pages/Form";
+import Form from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./Style.scss";
 import SinglePage from "./components/SinglePage";
 import Write from "./components/Write";
-import HomeComponent from "./components/HomeComponent";
+import HomeComponent from "./pages/Blog";
+import Contact from "./pages/Contact";
+
 const Layout = () => {
   return (
     <>
@@ -31,6 +33,11 @@ const router = createBrowserRouter([
         path: "/form",
         element: <Form />,
       },
+      {
+        path: "/contact",
+        element:  <Contact/>
+      },
+      
       {
         path: "/blog",
         element: <HomeComponent/>

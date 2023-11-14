@@ -6,7 +6,7 @@ import little from "../img/Group 6.svg";
 import ImageComponent from "../components/ImageComponent";
 import { Link } from "react-router-dom";
 import iconify from "../img/Inconify.svg";
-import HomeComponent from "../components/HomeComponent";
+import HomeComponent from "./Blog";
 
 
 function Home() {
@@ -40,14 +40,14 @@ function Home() {
           </Typography>
           <div className="flex space-x-4 pt-10">
             <Link
-              to=""
+              to="/blog"
               className="pt-4 pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
             >
               <p>Lire la suite</p>
               <img src={iconify} alt="inconify" className="w-5 pt-1" />
             </Link>
             <Link
-              to=""
+              to="/contact"
               className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"
             >
               Contactez-nous
