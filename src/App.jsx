@@ -6,11 +6,12 @@ import Form from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./Style.scss";
-import SinglePage from "./components/SinglePage";
+import SinglePage from "./pages/SinglePage";
 import Write from "./components/Write";
 import HomeComponent from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const Layout = () => {
   return (
@@ -34,7 +35,6 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
-
       {
         path: "/blog",
         element: <HomeComponent />,
@@ -53,6 +53,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/register",
+    element: <Register />,
+  }
 ]);
 
 function App() {

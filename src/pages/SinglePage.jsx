@@ -4,7 +4,7 @@ import ellipse from "../img/Ellipse 2.svg";
 import Iconedit from "../img/editIcon.svg";
 import Icondelete from "../img/DeleteIcon.svg";
 import { Link } from "react-router-dom";
-import Menu from "./Menu";
+import Menu from "../components/Menu";
 function SinglePage() {
   return (
     <div className="single">
