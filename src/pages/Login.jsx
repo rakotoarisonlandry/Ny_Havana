@@ -1,7 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const [inputs, setInput] = useState({
+    username: "",
+    password: "",
+  });
+  const [err, setError] = useState(null);
+
+  const navigate = useNavigate()
+  const handelChange = (e) => {
+    setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("/auth/login", inputs);
+      navigate("/")
+    } catch (err) {
+      setError(err.response.data);
+    }
+  };
+
   return (
     <section className="bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -17,15 +39,15 @@ function Login() {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Your email
+                  Nom d'utilisateur
                 </label>
                 <input
-                  type="email"
-                  name="email"
-                  id="email"
+                  type="text"
+                  name="username"
                   className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="name@company.com"
+                  placeholder="votre nom"
                   required=""
+                  onChange={handelChange}
                 />
               </div>
               <div>
@@ -38,13 +60,13 @@ function Login() {
                 <input
                   type="password"
                   name="password"
-                  id="password"
+                  onChange={handelChange}
                   placeholder="••••••••"
                   className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
                     <input
@@ -70,20 +92,21 @@ function Login() {
                 >
                   Forgot password?
                 </Link>
-              </div>
+              </div> */}
               <button
-                type="submit"
+                onClick={handelSubmit}
                 class="w-full text-white bg-[#1D4ED8] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
-                Sign in
+                Se connecter
               </button>
+              {err && <p>{err}</p>}
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{" "}
+                Vous n'avez pas encore de compte ?{" "}
                 <Link
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  to="/register"
+                  className="font-bold text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  Sign up
+                  S'inscrire
                 </Link>
               </p>
             </form>
