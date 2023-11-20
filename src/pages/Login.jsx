@@ -64,38 +64,11 @@ function Login() {
                   type="password"
                   name="password"
                   onChange={handelChange}
-                  placeholder="••••••••"
+                  placeholder="•••••••"
                   className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
-              {/* <div className="flex items-center justify-between">
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="remember"
-                      aria-describedby="remember"
-                      type="checkbox"
-                      className="w-4 h-4 border  rounded  focus:ring-3  bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800"
-                      required=""
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label
-                      htmlFor="remember"
-                      className="text-gray-500 dark:text-gray-300"
-                    >
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-                <Link
-                  to="/"
-                  className="text-sm  text-[#1D4ED8] font-bold hover:underline"
-                >
-                  Forgot password?
-                </Link>
-              </div> */}
               <button
                 onClick={handelSubmit}
                 class="w-full text-white bg-[#1D4ED8] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
