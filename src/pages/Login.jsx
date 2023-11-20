@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContexte } from "../context/AuthContext";
 
 function Login() {
   const [inputs, setInput] = useState({
@@ -9,7 +10,10 @@ function Login() {
   });
   const [err, setError] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const { login } = useContext(AuthContexte);
+
   const handelChange = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -17,8 +21,8 @@ function Login() {
   const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/auth/login", inputs);
-      navigate("/")
+      await login(inputs)
+      navigate("/");
     } catch (err) {
       setError(err.response.data);
     }
@@ -27,7 +31,6 @@ function Login() {
   return (
     <section className="bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        
         <div className="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">

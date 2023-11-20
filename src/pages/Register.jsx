@@ -9,7 +9,7 @@ function Register() {
   });
   const [err, setError] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handelChange = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -18,7 +18,7 @@ function Register() {
     e.preventDefault();
     try {
       await axios.post("/auth/register", inputs);
-      navigate("/login")
+      navigate("/login");
     } catch (err) {
       setError(err.response.data);
     }
