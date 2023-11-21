@@ -6,7 +6,7 @@ import { AuthContexte } from "../context/AuthContext";
 function Header() {
   const { currentUser, logout } = useContext(AuthContexte);
   return (
-    <div className="w-full flex top-1 select-none text-[#fff] pl-7 space-x-2">
+    <div className="w-full flex top-1 select-none text-[#fff] pl-7 space-x-1">
       <Link to="/" className="w-16 flex space-x-3 pt-3 pb-3  items-center">
         <img src={logo} alt="NyHavana" className="w-8" />
         <h2 className="text-2xl font-bold">Ny Havana</h2>
@@ -17,19 +17,23 @@ function Header() {
           <div className="w-2 h-2 bg-[#80a072] ml-5  rounded-full relative"></div>
         </Link>
         <Link to="/blog">Blog</Link>
-        {/* <Link
-          to="/login"
-          className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-2 pb-2 pl-9 pr-9"
-        >
-          Login
-        </Link> */}
-        <span>{currentUser?.username}</span>
+        {/* {currentUser ? (<span>username</span>) : (<Link to="/Contact">Contact</Link>)} */}
         {currentUser ? (
-          <span onClick={logout}>Logout</span>
+          <span>{currentUser?.username}</span>
+        ) : (
+          <Link to="/Contact">Contact</Link>
+        )}
+        {currentUser ? (
+          <span
+            onClick={logout}
+            className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] ml-0 border-[#FBB03B] pt-2 pb-2 pl-9 pr-9"
+          >
+            Logout
+          </span>
         ) : (
           <Link
             to="/login"
-            className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-2 pb-2 pl-9 pr-9"
+            className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] ml-0 border-[#FBB03B] pt-2 pb-2 pl-9 pr-9"
           >
             Login
           </Link>
