@@ -23,16 +23,15 @@ function HomeComponent() {
   }, [cat]);
   return (
     <>
-      <HeaderBlog/>
+      <HeaderBlog />
       <div className="home  pt-20 w-full flex items-center justify-center">
         <div className="posts mt-[1%] items-center justify-center flex-col w-[100%] ">
           {posts.map((post) => (
-            <div key={post.id} className="flex mb-[20%]  post flex ">
+            <div key={post.id} className="flex mb-[20%]  post flex">
               <div>
                 <Link to={`/post/${post.id}`}>
                   <img
                     src={post.img}
-                    // src={imageOne }
                     className="w-[1800px] object-cover"
                     alt=""
                   />
