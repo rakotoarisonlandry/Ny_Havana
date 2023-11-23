@@ -31,7 +31,7 @@ function HomeComponent() {
               <div>
                 <Link to={`/post/${post.id}`}>
                   <img
-                    src={post.img}
+                    src={`../upload/${post.img}`}
                     className="w-[1800px] object-cover"
                     alt=""
                   />

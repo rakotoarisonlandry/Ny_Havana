@@ -11,7 +11,7 @@ function Header() {
         <img src={logo} alt="NyHavana" className="w-8" />
         <h2 className="text-2xl font-bold">Ny Havana</h2>
       </Link>
-      <ul className="flex items-center text-center text-[17px] space-x-16 pt-2 pl-[780px]">
+      <ul className="flex items-center text-center text-[17px] space-x-16 pt-2 pl-[650px]">
         <Link to="/" className="pt-6">
           <li className="font-bold text-[#80a072] pb-3">Accueil</li>
           <div className="w-2 h-2 bg-[#80a072] ml-5  rounded-full relative"></div>
@@ -19,7 +19,10 @@ function Header() {
         <Link to="/blog">Blog</Link>
         {/* {currentUser ? (<span>username</span>) : (<Link to="/Contact">Contact</Link>)} */}
         {currentUser ? (
-          <span>{currentUser?.username}</span>
+          <div className="flex space-x-16">
+            <Link to="/write">Write</Link>
+            <span>{currentUser?.username}</span>
+          </div>
         ) : (
           <Link to="/Contact">Contact</Link>
         )}

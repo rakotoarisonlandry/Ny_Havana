@@ -50,7 +50,7 @@ function SinglePage() {
           </div>
           {currentUser.username === post.username && (
             <div className="edit">
-              <Link to={`/write?edit=2`}>
+              <Link to={`/write?edit=2`} state={post}>
                 <img src={Iconedit} className="w-7" alt="" />
               </Link>
               <img onClick={handlDelete} src={Icondelete} alt="" />
