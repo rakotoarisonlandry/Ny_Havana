@@ -30,23 +30,24 @@ function Write() {
 
     try {
       state
-        ? await axios.put(`/posts/${state.id}`, {
+        ? await axios.put(`/post/${state.id}`, {
             title,
             desc: value,
             cat,
             img: file ? imgUrl : "",
           })
-        : await axios.post(`/posts/`, {
+        : await axios.post(`/post/`, {
             title,
             desc: value,
             cat,
             img: file ? imgUrl : "",
-            date: moment(Date.now).format("yyyy-MM-DD HH:mm:ss")
+            date: moment().format("YYYY-MM-DD HH:mm:ss"),
           });
     } catch (err) {
       console.log(err);
     }
   };
+
   console.log(value);
   return (
     <div className="add">

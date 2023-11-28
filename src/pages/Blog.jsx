@@ -21,6 +21,10 @@ function HomeComponent() {
     };
     fetchData();
   }, [cat]);
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent;
+  };
   return (
     <>
       <HeaderBlog />
@@ -47,7 +51,7 @@ function HomeComponent() {
                     </h2>
                   </div>
                 </Link>
-                <p className="text-white ">{post.desc}</p>
+                <p className="text-white ">{getText(post.desc)}</p>
                 <div className="mt-16">
                   <Link
                     to={`/post/${post.id}`}
