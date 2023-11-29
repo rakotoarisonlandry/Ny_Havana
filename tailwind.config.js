@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '5xl':'20px 20px 50px rgba(0,0,0,0.5)',
+      },
+      fontFamily : {
+        'poppins': ['Poppins','sans-serif']
+      }
+    },
   },
   plugins: [],
 }
