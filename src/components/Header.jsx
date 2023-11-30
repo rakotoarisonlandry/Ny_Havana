@@ -6,7 +6,7 @@ import { AuthContexte } from "../context/AuthContext";
 function Header() {
   const { currentUser, logout } = useContext(AuthContexte);
   return (
-    <div className="w-full flex top-1 select-none text-[#fff] pl-7 space-x-1 ">
+    <div className="w-full flex top-1 select-none text-[#fff] pl-7 space-x-1 backdrop-filter backdrop-blur-sm fixed z-[100]">
       <Link to="/" className="w-16 flex space-x-3 pt-3 pb-3  items-center">
         <img src={logo} alt="NyHavana" className="w-8" />
         <h2 className="text-2xl font-bold">Ny Havana</h2>

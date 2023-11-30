@@ -26,7 +26,7 @@ function Home() {
     <>
       <img src={little} alt="little avatar" className="absolute" />
       <div className=" mt-28 ml-10 flex ">
-        <div className="w-[50%] space-y-7 ">
+        <div className="w-[50%] mt-24 space-y-7 ">
           <Typography
             variant="h2"
             className="text-gradient "

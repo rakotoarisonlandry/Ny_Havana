@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function HeaderBlog() {
   return (
     <>
-      <div className="links flex mt-5 space-x-11 text-[16px] pl-11 text-[#fff] ">
+      <div className="links flex mt-5 space-x-11 text-[16px] pl-11 text-[#fff]">
         <Link
           to="/blog/?cat=ResponsabiliteCivile"
           className="font-bold text-[#F9A73D]"

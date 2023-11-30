@@ -2,7 +2,6 @@ import React from "react";
 import avatar from "../img/Avatar.svg";
 import Groupe2 from "../img/Shape.svg";
 import ellipse from "../img/Ellipse 2.svg";
-import Tilt from "react-parallax-tilt";
 function ImageComponent() {
   return (
     <div className="">
