@@ -61,7 +61,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <div className="font-poppins ">
       <RouterProvider router={router} />
     </div>
   );

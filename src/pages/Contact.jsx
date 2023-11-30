@@ -11,7 +11,7 @@ function Contact() {
       <div className="flex w-[100%] p-10 ">
         <div className="h-[30rem] w-[30rem] absolute rounded-full bg-gradient-to-r from-[#D4145A] to-[#FBB03B] left-[-200px] top-[50%] animate-pulse"></div>
         <Tilt>
-          <form className="space-y-3 md:space-y-6 text-white w-[200%] h-[100%] justify-center  pt-10 pb-10 pl-5 pr-5 rounded-2xl shadow-5xl border border-r-0 border-t-0  backdrop-filter backdrop-blur-sm  relative z-2 ">
+          <form className="space-y-3 md:space-y-6 text-white w-[150%] h-[100%] justify-center  pt-10 pb-10 pl-5 pr-5 rounded-2xl shadow-5xl border border-r-0 border-t-0  backdrop-filter backdrop-blur-sm  relative z-2 ">
             <h2 className="tracking-wide">Submiter une requette</h2>
             <div>
               <label
@@ -44,7 +44,7 @@ function Contact() {
               </label>
               <input
                 type="email"
-                className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none "
+                className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none"
                 placeholder="Veuillez entrer votre e-mail"
                 required
               />
@@ -54,13 +54,12 @@ function Contact() {
               <input
                 type="text"
                 required=""
-                className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none "
+                className="border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none "
               />
             </div>
             <label htmlFor="">Description*</label>
           </form>
         </Tilt>
-
         <div>
           <ContactComponent />
         </div>
