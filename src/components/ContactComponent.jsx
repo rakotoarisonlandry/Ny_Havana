@@ -38,7 +38,7 @@ function ContactComponent() {
       icon: <AddIcCallRoundedIcon style={{color:"#e54e5e"}}/>,
       title: "AC INDEPENDANCE",
       email: "ac.independance@nyhavana.mg",
-      adresse: "Antananarivo 101-Av de l'Indépendance",
+      adresse: "Av de l'Indépendance",
       num: "+261 34 07 220 36 / +261 32 02 134 55",
     },
     {
