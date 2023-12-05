@@ -58,7 +58,7 @@ function Login() {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Password
+                  Mot de passe
                 </label>
                 <input
                   type="password"
@@ -76,7 +76,7 @@ function Login() {
                 Se connecter
               </button>
               {err && <p>{err}</p>}
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Vous n'avez pas encore de compte ?{" "}
                 <Link
                   to="/register"
@@ -84,7 +84,7 @@ function Login() {
                 >
                   S'inscrire
                 </Link>
-              </p>
+              </p> */}
             </form>
           </div>
         </div>

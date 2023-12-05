@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+// import imageTwo from "";
 import HeaderBlog from "../components/HeaderBlog";
 function HomeComponent() {
   const [posts, setPosts] = useState([]);
@@ -10,8 +11,11 @@ function HomeComponent() {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/posts/${cat}`);
-        console.log(res);
-        setPosts(res.data);
+        if (Array.isArray(res.data)) {
+          setPosts(res.data);
+        } else {
+          console.error("Data is not an array:", res.data);
+        }
       } catch (err) {
         console.error(err);
       }
@@ -26,14 +30,15 @@ function HomeComponent() {
     <>
       <HeaderBlog />
       <div className="home  pt-20 w-full flex items-center justify-center">
-        <div className="posts mt-[1%] items-center justify-center flex-col w-[100%] ">
+        <div className="posts mt-[1%] items-center justify-center flex-col w-[90%] ">
           {posts.map((post) => (
             <div key={post.id} className="flex mb-[20%]  post">
               <div>
                 <Link to={`/post/${post.id}`}>
                   <img
-                    src={`../upload/${post.img}`}
-                    className="w-[1800px] object-cover"
+                    src={`Front/public/upload/${post.img}`}
+                    // src={imageTwo}
+                    className="w-[1800px] h-[300px] object-cover"
                     alt=""
                   />
                 </Link>

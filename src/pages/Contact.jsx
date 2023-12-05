@@ -1,33 +1,29 @@
 import React from "react";
 import ContactComponent from "../components/ContactComponent";
+import "../index.css";
 import Tilt from "react-parallax-tilt";
+import { Link } from "react-router-dom";
 function Contact() {
   return (
     <div className="mt-32">
-      <h1 className="text-center text-[30px] font-semibold">Contact Us</h1>
-      <p className="text-center text-[18px]">
-        On vous suit tres reconnaissons de partager votre idées avec nous
+      <h1 className="text-gradient  text-center text-[30px] font-semibold">
+        Contacter Nous
+      </h1>
+      <p className="text-center text-[18px] text-white opacity-40  ">
+        On vous suit tres reconnaissons de partager vos idées avec nous
       </p>
       <div className="flex justify-center flex-wrap w-[100%] p-10">
-        <div className="h-[30rem] w-[30rem] absolute rounded-full bg-gradient-to-r from-[#D4145A] to-[#FBB03B] left-[-200px] top-[50%] animate-pulse"></div>
+        {/* <div className="h-[30rem] w-[30rem] absolute rounded-full bg-gradient-to-r from-[#D4145A] to-[#FBB03B] left-[-200px] top-[50%] "></div> */}
         <Tilt>
-          <form className="space-y-3 md:space-y-6 text-white w-[150%] h-[100%] justify-center  pt-10 pb-10 pl-5 pr-5 rounded-2xl shadow-5xl border border-r-0 border-t-0  backdrop-filter backdrop-blur-sm  relative z-2 ">
-            <h2 className="tracking-wide">Submiter une requette</h2>
-            <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-sm font-medium text-white"
-              >
-                request to*
-              </label>
-              <input
-                type="text"
-                required=""
-                className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none "
-              />
+          <form className="space-y-3 md:space-y-6 text-white w-[150%] h-[90%] justify-center  pt-10 pb-10 pl-5 pr-5 rounded-2xl shadow-5xl border border-r-0 border-t-0  backdrop-filter backdrop-blur-sm  relative z-2 ">
+            <div className="flex w-[250px] space-x-44">
+              <h2 className="tracking-wide underline text-[#FBB03B] font-bold ">
+                Soumettre une requête
+              </h2>
+              <p>*:obligatoire</p>
             </div>
             <div>
-              <label htmlFor="">Nom complet</label>
+              <label htmlFor="">Nom complet*</label>
               <input
                 type="text"
                 placeholder="Veuillez entrer votre Nom complet"
@@ -54,13 +50,26 @@ function Contact() {
               <input
                 type="text"
                 required=""
+                placeholder="Quelle sujet voulez vous aborder ?"
                 className="border  sm:text-sm rounded-lg  block w-full p-2.5 bg-transparent border-r-0 border-l-0 border-t-0 border-gray-600 placeholder-gray-400 text-white focus:outline-none "
               />
             </div>
             <label htmlFor="">Description*</label>
+
+            <div className="block w-[200px]">
+              <textarea
+                required=""
+                placeholder="Donner votre Suggestion"
+                rows={3}
+                className=" pr-2 pl-2 bg-transparent border relative mb-7"
+              />
+            </div>
+            <button class="w-full text-white bg-gradient-to-r from-[#D4145A] to-[#FBB03B] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-3 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+              Se soumettre
+            </button>
           </form>
         </Tilt>
-        <div className="w-[50%] ml-48">
+        <div className="w-[59%] ml-48">
           <ContactComponent />
         </div>
       </div>

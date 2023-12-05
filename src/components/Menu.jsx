@@ -14,7 +14,7 @@ const Menu = ({ cat }) =>{
         console.log(res);
         setPosts(res.data);
       } catch (err) {
-        console.error(err);
+        console.log(err);
       }
     };
     fetchData();

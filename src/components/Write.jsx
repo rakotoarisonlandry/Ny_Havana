@@ -30,13 +30,13 @@ function Write() {
 
     try {
       state
-        ? await axios.put(`/post/${state.id}`, {
+        ? await axios.put(`/posts/${state.id}`, {
             title,
             desc: value,
             cat,
             img: file ? imgUrl : "",
           })
-        : await axios.post(`/post/`, {
+        : await axios.post(`/posts/`, {
             title,
             desc: value,
             cat,
@@ -48,10 +48,9 @@ function Write() {
     }
   };
 
-  console.log(value);
   return (
-    <div className="add">
-      <div className="content">
+    <div className="add ">
+      <div className="content mt-24">
         <input
           type="text"
           value={title}
@@ -67,12 +66,9 @@ function Write() {
           />
         </div>
       </div>
-      <div className="Menu">
+      <div className="Menu mt-24">
         <div className="items">
           <h1>Publish</h1>
-          <span>
-            <b>Status :</b>Draft
-          </span>
           <span>
             <b>Visibility :</b> Public
           </span>
@@ -81,20 +77,10 @@ function Write() {
             type="file"
             id="file"
             name=""
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setFile(e.target.files[0])} 
           />
-          <label htmlFor="file"> Upload Image</label>
-          <div className="button flex space-x-10">
-            <button className="text-[#FBB03B] font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9">
-              Save As Draft
-            </button>
-            <button
-              onClick={handleClick}
-              className="pt-4 pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
-            >
-              Publish
-            </button>
-          </div>
+          <label htmlFor="file" className=""> Upload Image</label>
+          
         </div>
         <div className="items">
           <h1>Category</h1>
@@ -165,6 +151,14 @@ function Write() {
             <label htmlFor="">Assurance “Sur Mesure“</label>
           </div>
         </div>
+        <div className="button flex space-x-10">
+            <button
+              onClick={handleClick}
+              className="pt-4 pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
+            >
+              Publish
+            </button>
+          </div>
       </div>
     </div>
   );

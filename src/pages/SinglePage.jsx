@@ -30,37 +30,36 @@ function SinglePage() {
     fetchData();
   }, [postId]);
 
-  const handlDelete =async ()=>{
+  const handleDelete = async () => {
     try {
       await axios.delete(`/posts/${postId}`);
-      
     } catch (err) {
       console.error(err);
     }
-  }
+  };
   return (
-    <div className="single">
-      <div className="content">
-        <img src={post?.img} className="w-[80%] h-[26%]" alt="" />
-        <div className="user">
-          {post.userImg &&  <img src={post.userImg} alt="" />}
+    <div className="single ">
+      <div className="content mt-24">
+        <img src={`../img/${post?.img}`} className="w-[80%] h-[%]" alt="" />
+        <div className="user ">
+          {post.userImg && <img src={post.userImg} alt="" />}
           <div className="info">
             <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
-          {currentUser.username === post.username && (
+          {currentUser && currentUser.username === post.username && (
             <div className="edit">
               <Link to={`/write?edit=2`} state={post}>
                 <img src={Iconedit} className="w-7" alt="" />
               </Link>
-              <img onClick={handlDelete} src={Icondelete} alt="" />
+              <img onClick={handleDelete} src={Icondelete} alt="" />
             </div>
           )}
         </div>
         <h1>{post.title}</h1>
         {post.desc}
       </div>
-      <Menu cat={post.cat}/>
+      <Menu cat={post.cat} />
     </div>
   );
 }
