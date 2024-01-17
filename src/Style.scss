@@ -1,3 +1,5 @@
+//home
+
 .home {
   .posts {
     .post {
@@ -9,6 +11,36 @@
   }
 }
 
+@media screen and (max-width: 1240px) {
+  .home-responsive {
+    display: block;
+    .home-responsive-component {
+      width: 100%;
+      align-items: center;
+      margin-right: 50%;
+      // .responsive-typography{
+      //   width: 50%;
+      // }
+    }
+    .image-responsive{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .home-responsive {
+    display: block;
+    .home-responsive-component {
+      width: 100%;
+      align-items: center;
+      margin-right: 50%;
+    }
+    .image-responsive{
+      position: relative;
+    }
+  }
+}
 //SinglePage
 
 .single {
@@ -121,6 +153,33 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+    }
+  }
+}
+
+//header
+
+.header {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  @media screen and (max-width: 1240px) {
+    & {
+      .responsive-menu {
+        display: block;
+        position: absolute;
+        right: 60px;
+        top: 5px;
+      }
+
+      ul {
+        display: none;
+      }
     }
   }
 }

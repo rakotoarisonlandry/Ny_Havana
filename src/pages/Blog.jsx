@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-// import imageTwo from "";
 import HeaderBlog from "../components/HeaderBlog";
+import image from "../img/Rectangle 4.svg"
 function HomeComponent() {
   const [posts, setPosts] = useState([]);
   const cat = useLocation().search;
@@ -22,6 +22,8 @@ function HomeComponent() {
     };
     fetchData();
   }, [cat]);
+
+  
   const getText = (html) => {
     const doc = new DOMParser().parseFromString(html, "text/html");
     return doc.body.textContent;
@@ -36,7 +38,8 @@ function HomeComponent() {
               <div>
                 <Link to={`/post/${post.id}`}>
                   <img
-                    src={`Front/public/upload/${post.img}`}
+                    src={`/static/media/${post.img}`}
+                    // src={image}
                     // src={imageTwo}
                     className="w-[1800px] h-[300px] object-cover"
                     alt=""
@@ -49,7 +52,7 @@ function HomeComponent() {
                     <div className="w-2 h-2 rounded-full bg-[#DF4051]"></div>
                     <div className="w-3 h-3 rounded-full bg-[#F9A83C]"></div>
                     <h2 className="text-[#F9A83C] text-[30px] font-bold">
-                      {post.title}
+                      {getText(post.title)}
                     </h2>
                   </div>
                 </Link>

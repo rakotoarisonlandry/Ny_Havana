@@ -6,17 +6,17 @@ function HeaderBlog() {
       <div className="links flex mt-24 space-x-11 text-[14px] pl-11 text-[#fff]">
         <Link
           to="/blog/?cat=ResponsabiliteCivile"
-          className="font-bold text-[#F9A73D]"
+          className=" focus:font-bold focus:text-[#F9A73D]"
         >
           Assurances de Responsabilite civile
         </Link>
-        <Link to="/blog/?cat=Biens">Assurance des Biens</Link>
-        <Link to="/blog/?cat=Transport">Assurance Maritimes & Transport</Link>
-        <Link to="/blog/?cat=Personnes">Assurance des Personnes</Link>
-        <Link to="/blog/?cat=RisquesSpeciaux">Assurance Risques Speciaux </Link>
+        <Link to="/blog/?cat=Biens" className=" focus:font-bold focus:text-[#F9A73D]" >Assurance des Biens</Link>
+        <Link to="/blog/?cat=Transport" className=" focus:font-bold focus:text-[#F9A73D]" >Assurance Maritimes & Transport</Link>
+        <Link to="/blog/?cat=Personnes" className=" focus:font-bold focus:text-[#F9A73D]">Assurance des Personnes</Link>
+        <Link to="/blog/?cat=RisquesSpeciaux" className=" focus:font-bold focus:text-[#F9A73D]">Assurance Risques Speciaux </Link>
       </div>
       <div className="flex mt-5 space-x-11 text-[16px] pl-11 text-[#fff]  ">
-        <Link to="/blog/?cat=SurMesure">Assurance “Sur Mesure“</Link>
+        <Link to="/blog/?cat=SurMesure" className=" focus:font-bold focus:text-[#F9A73D]">Assurance “Sur Mesure“</Link>
       </div>
     </>
   );

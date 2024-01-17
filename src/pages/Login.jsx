@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContexte } from "../context/AuthContext";
+import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
 
 function Login() {
   const [inputs, setInput] = useState({
@@ -21,7 +23,7 @@ function Login() {
   const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(inputs)
+      await login(inputs);
       navigate("/");
     } catch (err) {
       setError(err.response.data);
@@ -33,9 +35,12 @@ function Login() {
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
-              Sign in to your account
-            </h1>
+            {/* <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
+
+            </h1> */}
+            <Stack className="text-center justify-center items-center" >
+              <Avatar  src="/broken-image.jpg " style={{ width: '60px', height: '60px' }}/>
+            </Stack>
             <form className="space-y-4 md:space-y-6" action="#">
               <div>
                 <label

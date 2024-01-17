@@ -3,7 +3,8 @@ import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
 import { AuthContexte } from "../context/AuthContext";
 import AvatarInitials from "avatar-initials";
-
+import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
 function Header() {
   const { currentUser, logout } = useContext(AuthContexte);
 
@@ -18,10 +19,19 @@ function Header() {
   };
 
   return (
-    <div className="w-full flex top-0 select-none text-[#fff] pl-7 space-x-1 backdrop-filter backdrop-blur-sm fixed z-[100]">
+    <div className="header w-full flex top-0 select-none text-[#fff] pl-7 space-x-1 backdrop-filter backdrop-blur-sm fixed z-[100]">
       <Link to="/" className="w-16 flex space-x-3 pt-3 pb-3  items-center">
         <img src={logo} alt="NyHavana" className="w-8" />
         <h2 className="text-2xl font-bold">Ny Havana</h2>
+      </Link>
+      <Link className="space-x-7">
+        <label
+          for="responsive-menu"
+          className="responsive-menu space-x-3 pt-3 pb-3"
+        >
+          MENU
+        </label>
+        <input type="checkbox" id="responsive-menu" role="button" />
       </Link>
       <ul className="flex items-center text-center text-[17px] space-x-16 pt-2 pl-[580px]">
         <Link to="/" className="pt-6">
@@ -46,9 +56,12 @@ function Header() {
             >
               logout
             </span>
-            <div className="w-8 h-8 rounded-full bg-[#80a072]  text-white flex items-center justify-center font-extrabold">
-              {(currentUser?.username[0]).toUpperCase()}
-            </div>
+            {/* <div className="w-8 h-8 rounded-full bg-[#80a072]  text-white flex items-center justify-center font-extrabold">
+              
+            </div> */}
+            <Stack className="text-center justify-center items-center ">
+              <Avatar>{(currentUser?.username[0]).toUpperCase()}</Avatar>
+            </Stack>
           </div>
         ) : (
           <Link

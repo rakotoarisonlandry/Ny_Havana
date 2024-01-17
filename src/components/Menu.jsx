@@ -5,6 +5,10 @@ import yoga from "../img/Rectangle 4.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const getText = (html) => {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return doc.body.textContent;
+};
 const Menu = ({ cat }) =>{
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -28,18 +32,18 @@ const Menu = ({ cat }) =>{
             <div className="w-2 h-2 rounded-full bg-[#DF4051]"></div>
             <div className="w-3 h-3 rounded-full bg-[#F9A83C]"></div>
             <h2 className="text-[#F9A83C] text-[30px] font-bold">
-              {post.title}
+              {getText(post.title)}
             </h2>
           </div>
           <Link to="/">
             <h3 className="text-[#807182] text-[20px]  font-semibold">
-              {post.title}
+              {getText(post.title)}
             </h3>
           </Link>
           <Link to={`/post/${post.id}`}>
             <img src={post.img} className="w-[1800px] object-cover" alt="" />
           </Link>
-          <p className="text-white ">{post.desc}</p>
+          <p className="text-white ">{getText(post.desc)}</p>
           <Link
             to={`/post/${post.id}`}
             className="text-[#FBB03B] mt-1 text-center font-semibold select-none rounded-xl border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"

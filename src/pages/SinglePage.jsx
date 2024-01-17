@@ -37,10 +37,15 @@ function SinglePage() {
       console.error(err);
     }
   };
+
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent;
+  };
   return (
     <div className="single ">
       <div className="content mt-24">
-        <img src={`../img/${post?.img}`} className="w-[80%] h-[%]" alt="" />
+        <img src={`${post?.img}`} className="w-[80%] h-[%]" alt="" />
         <div className="user ">
           {post.userImg && <img src={post.userImg} alt="" />}
           <div className="info">
@@ -56,8 +61,8 @@ function SinglePage() {
             </div>
           )}
         </div>
-        <h1>{post.title}</h1>
-        {post.desc}
+        <h1>{getText(post.title)}</h1>
+        <div className="text-white w-[80%]">{post.desc}</div>
       </div>
       <Menu cat={post.cat} />
     </div>

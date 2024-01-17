@@ -25,11 +25,11 @@ function Home() {
   return (
     <>
       <img src={little} alt="little avatar" className="animate-pulse absolute" />
-      <div className=" mt-28 ml-10 flex ">
-        <div className="w-[50%] mt-24 space-y-7 ">
+      <div className="home-responsive mt-28 ml-10 flex ">
+        <div className="home-responsive-component w-[50%] mt-24 space-y-7 ">
           <Typography
             variant="h2"
-            className="text-gradient "
+            className="responsive-typography text-gradient "
             style={customStyle}
           >
             Compagnie Malgache D’assurance et de Reassurance.
@@ -40,24 +40,23 @@ function Home() {
           <div className="flex space-x-4 pt-10">
             <Link
               to="/blog"
-              className="pt-4  pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
+              className="responsive-button pt-4  pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
             >
               <p>Lire la suite</p>
               <img src={iconify} alt="inconify" className="w-5 pt-1" />
             </Link>
             <Link
               to="/contact"
-              className="text-[#FBB03B] font-semibold select-none rounded-xl  border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"
+              className="responsive-button text-[#FBB03B] font-semibold select-none rounded-xl  border-[1px] border-[#FBB03B] pt-4 pb-4 pl-9 pr-9"
             >
               Contactez-nous
             </Link>
           </div>
         </div>
-        <div>
+        <div className="image-responsive">
           <ImageComponent />
         </div>
       </div>
-      {/* <div><HomeComponent/></div> */}
     </>
   );
 }

@@ -11,7 +11,9 @@ function Write() {
   const [title, setTitle] = useState(state?.desc || "");
   const [file, setFile] = useState(null);
   const [cat, setCat] = useState(state?.cat || "");
-
+   
+  console.log(value)
+  console.log(title)
   const upload = async () => {
     try {
       const formData = new FormData();
@@ -48,30 +50,31 @@ function Write() {
     }
   };
 
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent;
+  };
   return (
     <div className="add ">
       <div className="content mt-24">
         <input
           type="text"
-          value={title}
+          value={getText(value)}
           placeholder="Title"
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
         <div className="editorContainer">
           <ReactQuill
             className="editor"
             theme="snow"
-            value={value}
-            onChange={setValue}
+            value={title}
+            onChange={setTitle}
           />
         </div>
       </div>
       <div className="Menu mt-24">
         <div className="items">
-          <h1>Publish</h1>
-          <span>
-            <b>Visibility :</b> Public
-          </span>
+          <h1 className="text-[40px] text-[#f39241]">Editer</h1>
           <input
             style={{ display: "none" }}
             type="file"
@@ -79,11 +82,11 @@ function Write() {
             name=""
             onChange={(e) => setFile(e.target.files[0])} 
           />
-          <label htmlFor="file" className=""> Upload Image</label>
+          <label htmlFor="file" className="hover:underline"> importer une photo</label>
           
         </div>
         <div className="items">
-          <h1>Category</h1>
+          <h1>Categories</h1>
           <div>
             <input
               type="radio"
@@ -156,7 +159,7 @@ function Write() {
               onClick={handleClick}
               className="pt-4 pb-4 pl-9 pr-9 flex select-none  space-x-3  rounded-xl text-[#fff]  font-bold bg-gradient-to-r from-[#D4145A] to-[#FBB03B]"
             >
-              Publish
+              Publier
             </button>
           </div>
       </div>
